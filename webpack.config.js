@@ -12,7 +12,8 @@ module.exports = {
     rules: [
       {
         test: /\.css$/i,
-        use: ['stule-loader', 'css-loader'],
+
+        use: ['style-loader', 'css-loader'],
       },
       {
         test: /\.(png|jpg|jpeg|gif|svg)$/i,

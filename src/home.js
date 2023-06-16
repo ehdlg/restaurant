@@ -4,11 +4,4 @@ export default function generateHome() {
   let home = document.createElement('div');
   let title = document.createElement('h1');
   let restaurantIcon = document.createElement('img');
-
-  title.textContent = 'Restaurant';
-  home.appendChild(title);
-  home.appendChild(restaurantIcon);
-  restaurantIcon.src = RestaurantIcon;
-  restaurantIcon.width = 200;
-  content.appendChild(home);
 }

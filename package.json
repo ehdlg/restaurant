@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "test",
-    "webpack": "webpack --watch",
-    "echo": "echo 1 + 1"
+    "webpack": "webpack --watch"
   },
   "author": "Enrique Hidalgo",
   "license": "ISC",
