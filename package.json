@@ -4,11 +4,15 @@
   "description": "Restaurante Page Odin Project",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "test",
+    "webpack": "webpack --watch",
+    "echo": "echo 1 + 1"
   },
   "author": "Enrique Hidalgo",
   "license": "ISC",
   "devDependencies": {
+    "css-loader": "^6.8.1",
+    "style-loader": "^3.3.3",
     "webpack": "^5.87.0",
     "webpack-cli": "^5.1.4"
   }
