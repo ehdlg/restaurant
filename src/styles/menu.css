@@ -1,0 +1,9 @@
+img {
+  max-width: 30%;
+}
+
+#menu-meals {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  justify-items: center;
+}

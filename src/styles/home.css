@@ -1,0 +1,34 @@
+.card-home {
+  padding: 1.25rem;
+  background-color: var(--secondary-button);
+  border-radius: 20px;
+  background-color: var(--primary-button-transparency);
+}
+
+.card-home:nth-child(even) {
+  background-color: var(--secondary-button);
+}
+
+.card-home h3 {
+  font-size: 1.2rem;
+  text-align: center;
+  color: var(--primary-button);
+}
+
+.card-home-body {
+  margin-top: 1.25rem;
+  gap: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  justify-content: space-around;
+}
+
+.card-home:nth-child(even) .card-home-body {
+  flex-direction: row-reverse;
+}
+
+.card-home-body img {
+  max-width: 40%;
+  border-radius: 5px;
+}
