@@ -1,3 +1,12 @@
+/**
+ * Funcion que comprueba si el elemento pasado por parametro está seleccionado
+ * Para ello obtiene el elemento con la clase 'selected' y comprueba si el elemento
+ * pasado por parametro es el mismo. Si es el mismo, devuelve true, si no es el mismo
+ * elimina la clase selected del elemento del DOM y la asgina al nuevo elemento.
+ * Devuelve false en este ultimo caso
+ * @param {} navElement
+ * @returns boolean True si el menu esta seleccionado, False si no
+ */
 function isMenuSelected(navElement) {
   let selectedMenu = document.querySelector('.selected');
   if (navElement === selectedMenu) {
@@ -7,13 +16,22 @@ function isMenuSelected(navElement) {
   navElement.classList.add('selected');
   return false;
 }
-
-function clearContent() {
-  while (content.hasChildNodes()) {
-    content.removeChild(content.firstChild);
+/**
+ * Funcion que elimina todos los hijos del elemento pasado por parametro
+ */
+function clearContent(element) {
+  while (element.hasChildNodes()) {
+    console.log(element);
+    element.removeChild(content.firstChild);
   }
 }
-
+/**
+ * Funcion que genera un div con la informacion del objeto 'meal' pasado
+ * por parametro y devuelve dicho elemento.
+ 
+ * @param {*} meal 
+ * @returns elemento div
+ */
 function generateCardMeal(meal) {
   let card = document.createElement('div');
   card.classList.add('card-menu');
@@ -66,10 +84,4 @@ function generateHomeCard(info) {
   return card;
 }
 
-export {
-  generateHomeCard,
-  isMenuSelected,
-  clearContent,
-  generateContent,
-  generateCardMeal,
-};
+export { generateHomeCard, isMenuSelected, clearContent, generateCardMeal };
