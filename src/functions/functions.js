@@ -43,5 +43,38 @@ function generateCardMeal(meal) {
 
   return card;
 }
+/**
+ * Funcion que genera una card con el objeto info pasado por parametro
+ */
+function generateHomeCard(info) {
+  let card = document.createElement('div');
+  card.classList.add('card-home');
 
-export { isMenuSelected, clearContent, generateContent, generateCardMeal };
+  let cardBody = document.createElement('div');
+  cardBody.classList.add('card-home-body');
+
+  let titleElement = document.createElement('h3');
+  titleElement.textContent = info.title;
+  card.appendChild(titleElement);
+
+  let imgElement = document.createElement('img');
+  imgElement.src = info.img;
+  imgElement.alt = `${info.title} image.`;
+  cardBody.appendChild(imgElement);
+
+  let textElement = document.createElement('p');
+  textElement.textContent = info.text;
+  cardBody.appendChild(textElement);
+
+  card.appendChild(cardBody);
+
+  return card;
+}
+
+export {
+  generateHomeCard,
+  isMenuSelected,
+  clearContent,
+  generateContent,
+  generateCardMeal,
+};
