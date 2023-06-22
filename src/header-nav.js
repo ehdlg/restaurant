@@ -1,5 +1,5 @@
-import Logo from './logo.svg';
-
+import Logo from './img/logo.svg';
+import './styles/header-nav.css';
 export default function generateHeaderNav() {
   let mainTitle = document.querySelector('#title');
   let logoElement = document.querySelector('#logo');
