@@ -14,11 +14,6 @@ function clearContent() {
   }
 }
 
-function generateContent() {
-  let section = this.dataset.section;
-  console.log(contentFunctions[section]);
-}
-
 function generateCardMeal(meal) {
   let card = document.createElement('div');
   card.classList.add('card-menu');
