@@ -1,5 +1,6 @@
 import RestaurantIcon from './img/restaurant.jpg';
 import './styles/home.css';
+import { generateHomeCard } from './functions/functions';
 //Array de objetos con informacion del restaurante
 const cardsInfo = [
   {
@@ -38,32 +39,4 @@ export default function generateHome() {
   cardsInfo.forEach((info) => {
     content.appendChild(generateHomeCard(info));
   });
-}
-
-/**
- * Funcion que genera una card con el objeto info pasado por parametro
- */
-function generateHomeCard(info) {
-  let card = document.createElement('div');
-  card.classList.add('card-home');
-
-  let cardBody = document.createElement('div');
-  cardBody.classList.add('card-home-body');
-
-  let titleElement = document.createElement('h3');
-  titleElement.textContent = info.title;
-  card.appendChild(titleElement);
-
-  let imgElement = document.createElement('img');
-  imgElement.src = info.img;
-  imgElement.alt = `${info.title} image.`;
-  cardBody.appendChild(imgElement);
-
-  let textElement = document.createElement('p');
-  textElement.textContent = info.text;
-  cardBody.appendChild(textElement);
-
-  card.appendChild(cardBody);
-
-  return card;
 }
