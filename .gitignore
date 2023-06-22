@@ -1,4 +1,5 @@
 # Ignorar la carpeta node_modules
 node_modules/
 #Ignorar la carpeta generada por webpack
-dist/
+dist/*
+!dist/*.html

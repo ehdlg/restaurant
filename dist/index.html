@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Restaurant</title>
     <script src="main.js" defer></script>
   </head>
   <body>
@@ -13,9 +13,13 @@
     </header>
     <nav>
       <ul id="menu">
-        <li class="list-menu" id="nav-home"></li>
-        <li class="list-menu" id="nav-menu"></li>
-        <li class="list-menu" id="nav-about"></li>
+        <li
+          class="list-element selected"
+          id="nav-home"
+          data-section="home"
+        ></li>
+        <li class="list-element" id="nav-menu" data-section="menu" ="menu"></li>
+        <li class="list-element" id="nav-about" data-section="about"></li>
       </ul>
     </nav>
     <main id="content"></main>
