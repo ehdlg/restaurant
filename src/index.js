@@ -13,13 +13,14 @@ const contentFunctions = {
 
 //Variable que recoge los elemento <li> del menu de navegación
 let navElements = document.querySelectorAll('.list-element');
+let content = document.querySelector('#content');
 
 navElements.forEach((element) => {
   element.addEventListener('click', function () {
     if (!isMenuSelected(this)) {
       let sectionToGenerate =
         contentFunctions[this.dataset.section] ?? generateHome;
-      clearContent();
+      clearContent(content);
       sectionToGenerate();
     }
   });
